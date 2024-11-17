@@ -15,4 +15,34 @@
 // !popup mesajı verir
 // alert("this is an alert message");
 
+// !Kullanıcıdan veri alma
+// let isim1=prompt("Enter your name: "); // !prompt sadece string döner number almak istiyorsak type conversion yapmalıyız
+// let isim2=prompt("Enter your name2: ");
+// window.prompt("Enter your name2: ");
+// console.log(prompt("Enter your name3: "));
+// console.log(window.prompt("Enter your name4: "));
 
+// console.log("ismin bu bence: " +isim1);
+
+// let booluen = confirm("Are you sure?");
+// console.log(booluen);
+// if (booluen == true) {
+//     booluen = 1;}
+// else { booluen = false;
+//     booluen = 0;}
+
+// let numberBoolean = Number(booluen);
+// console.log(numberBoolean);
+let vize1 = prompt("Enter your vize1: ");
+let vize2 = prompt("Enter your vize2: ");
+let final = prompt("Enter your final: ");
+let ortalama = (Number(vize1)*0.3 + Number(vize2)*0.3 + Number(final)*0.4);
+if (ortalama>=50) {
+    console.log("Congratulations! You passed the lesson. Your average is: " + ortalama);
+}
+else if (ortalama<50 && ortalama>=0) {
+    console.log("Sorry! You failed the lesson. Your average is: " + ortalama);
+}
+else {
+    console.log("Please enter a valid number.");
+}
