@@ -102,3 +102,67 @@ else {
     console.log("This is not an amstrong number.");
 }
 }
+
+// !Kullanıcıdan prompt olarak alınan metinde istenilen harfin kaç kez geçtiğini gösterir
+function countCharacterInString() {
+    let userInput = prompt("Enter a string: ");
+    let character = prompt("Enter the character to count: ");
+    
+    if (character.length !== 1) {
+        alert("Please enter a single character.");
+        return;
+    }
+
+    let count = 0;
+    for (let i = 0; i < userInput.length; i++) {
+        if (userInput[i] === character) {
+            count++;
+        }
+    }
+
+    alert(`The character "${character}" appears ${count} times in the string.`);
+}
+
+
+function isPerfectNumber(number){
+    let toplam = 0;
+    for(let i =2 ; i<=number/2 ; i++){
+        if(number%i==0){
+            toplam+=i;
+        }
+    }
+    toplam+=1+number;
+
+    if(toplam==number*2){
+        console.log("Mükemmel Sayıdır...");
+    }else{
+        console.log("Mükemmel Sayı Değildir..");
+    }
+}
+
+
+function convertDecimalToBinary(number){
+    let binary ="";
+    while(true){
+        binary+=(number%2).toString();
+        number=Math.floor(number/2);
+        if(number==1){
+            //Artık bölmek yok döngüden cıkacagız.
+            binary+=1;
+            break;
+        }
+    }
+    let result  = reverse(binary);
+    console.log("Sonuç : " + result);
+}
+
+
+function reverse(binary){
+    let reverseBinary = "";
+    for(let i = binary.length-1 ; i>=0 ; i--){
+        reverseBinary+=binary.charAt(i);
+    }
+
+    return reverseBinary;
+}
+
