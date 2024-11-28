@@ -147,7 +147,6 @@ function convertDecimalToBinary(number){
         binary+=(number%2).toString();
         number=Math.floor(number/2);
         if(number==1){
-            //Artık bölmek yok döngüden cıkacagız.
             binary+=1;
             break;
         }
