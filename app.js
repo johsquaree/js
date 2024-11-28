@@ -166,3 +166,5 @@ function reverse(binary){
     return reverseBinary;
 }
 
+
+
